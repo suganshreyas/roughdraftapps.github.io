@@ -36,6 +36,10 @@ nav {
   color: var(--text);
 }
 
+.brand-dot {
+  color: var(--accent);
+}
+
 .nav-links a {
   margin-left: 1rem;
   text-decoration: none;
@@ -57,6 +61,19 @@ h1 {
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+
+h1 {
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 0.75rem;
 }
 
 .lead {
