@@ -1,8 +1,8 @@
 :root {
-  --bg: #f6f5f3;
-  --text: #1e1e1e;
-  --muted: #6f6f6f;
-  --accent: #a24e3f;
+  --bg: #f6f4ef;
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --accent: #6a7f6a;
 }
 
 * {
@@ -11,22 +11,21 @@
 
 body {
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter",
+    "Helvetica Neue", Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-family: "Source Serif 4", serif;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.site-header {
-  padding: 1.5rem 1.25rem;
-}
-
-nav {
+main {
   max-width: 680px;
+  padding: 3rem 1.5rem 4rem;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+header {
+  margin-bottom: 3rem;
 }
 
 .site-nav {
@@ -50,86 +49,43 @@ nav {
   text-decoration: underline;
 }
 
-
-.brand {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  text-decoration: none;
-  color: var(--text);
-}
-
-.brand-dot {
-  color: var(--accent);
-}
-
-.nav-links a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: var(--muted);
-}
-
-.nav-links a:hover {
-  color: var(--text);
-}
-
-.content {
-  max-width: 680px;
-  margin: 4rem auto;
-  padding: 0 1.25rem;
-}
-
 h1 {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
 }
 
-h1 {
-  position: relative;
+h2 {
+  font-size: 1.25rem;
+  margin-top: 3rem;
 }
 
-h1::after {
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 2px;
-  background: var(--accent);
-  margin-top: 0.75rem;
+p {
+  margin: 1.25rem 0;
 }
 
 .lead {
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  color: var(--muted);
 }
 
-p {
-  margin-bottom: 1.25rem;
-}
-
-ul {
-  padding-left: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-.site-footer {
-  max-width: 680px;
-  margin: 4rem auto 2rem;
-  padding: 0 1.25rem;
+.muted {
   color: var(--muted);
   font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  .content {
-    margin: 3rem auto;
-  }
+footer {
+  margin-top: 4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
