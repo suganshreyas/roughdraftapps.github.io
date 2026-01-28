@@ -120,6 +120,46 @@ main a:hover {
   text-decoration-thickness: 2px;
 }
 
+/* Apps section */
+
+.apps {
+  margin-top: 4rem;
+}
+
+.apps h2 {
+  margin-bottom: 1.5rem;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.app-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.app-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.app-card p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive: two columns on wider screens */
+@media (min-width: 640px) {
+  .app-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
 /* Footer */
 
 footer {
