@@ -29,6 +29,28 @@ nav {
   align-items: center;
 }
 
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.site-nav .links a {
+  margin-left: 1.25rem;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+
 .brand {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
