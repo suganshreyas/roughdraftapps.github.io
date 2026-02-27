@@ -68,6 +68,15 @@
         version, app version, and interaction events. It does not directly identify you.
       </p>
 
+      <h3>Ad Campaign Attribution</h3>
+      <p>
+        When you install the app from an ad campaign, anonymous attribution data
+        (such as which campaign led to the install) may be collected by Apple's
+        AdServices and SKAdNetwork frameworks. This data is aggregated and
+        privacy-preserving — it does not identify you personally. It helps us
+        understand which campaigns help users discover our apps.
+      </p>
+
       <h3>Subscriptions &amp; Payments</h3>
       <p>
         Paid features are managed through the App Store using RevenueCat.
@@ -166,6 +175,7 @@
         <li><strong>Crash reports:</strong> Retained by Firebase Crashlytics for up to 90 days.</li>
         <li><strong>Subscription data:</strong> Managed by RevenueCat and Apple according to their respective retention policies.</li>
         <li><strong>AI request data:</strong> Not stored on our servers beyond the time needed to process and return a response.</li>
+        <li><strong>Usage limits:</strong> Anonymous daily API usage counts are stored server-side to enforce fair use limits. These are keyed by anonymous session identifier and reset daily.</li>
       </ul>
     </section>
 
@@ -202,7 +212,7 @@
         Rough Draft Oy apps.
       </p>
 
-      <h3>NutriNest - Pregnancy Nutrition Tracker</h3>
+      <h3>NutriNest — Pregnancy Nutrition Tracker</h3>
       <p>
         NutriNest helps expecting mothers track daily nutrition during pregnancy.
       </p>
@@ -223,8 +233,10 @@
       </ul>
 
       <p>
-        Your pregnancy information (due date, height, weight) is never sent to our
-        servers or any third party. It remains on your device at all times.
+        Your pregnancy week and dietary preferences are sent to our secure backend
+        when analyzing meals or generating suggestions, as this information is necessary
+        for accurate nutrition recommendations. Your due date, height, and weight are
+        never sent to our servers or any third party.
       </p>
 
       <p>
