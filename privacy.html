@@ -23,7 +23,7 @@
   </nav>
 
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated: February 2026</p>
+  <p class="muted">Last updated: March 2026</p>
 </header>
 
     <section>
@@ -114,23 +114,52 @@
       <h2>Artificial Intelligence Features</h2>
       <p>
         Some Rough Draft Oy apps include AI-based features that analyze user-provided
-        input such as text or images.
+        input to deliver personalized results. This section explains what data is
+        collected, how it is collected, how it is used, and with whom it is shared.
       </p>
+
+      <h3>What data is sent to AI</h3>
       <p>
-        AI processing is used only to deliver the requested functionality. We do not
-        build personal profiles, and we do not associate AI results with user identities.
+        When you use an AI feature, the following data may be sent to a third-party AI
+        service through our secure backend server:
       </p>
+      <ul>
+        <li><strong>User-provided text input</strong> — such as meal descriptions you type into the app</li>
+        <li><strong>Contextual health data</strong> — such as your pregnancy week, dietary preferences, and allergies, which you provide during onboarding or in settings</li>
+        <li><strong>Derived data</strong> — such as current nutrient gaps calculated from your meal logs, used to generate meal suggestions</li>
+      </ul>
+
+      <h3>How data is collected</h3>
       <p>
-        When you use an AI feature, your input is sent to a third-party AI service
-        (such as Google Gemini) through our secure backend server. Your input is
-        processed solely to generate the response you requested. Google's data usage
-        policies apply to data processed by their services. We encourage you to review
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>
-        for details on how they handle data.
+        All data sent to AI is either directly entered by you (meal descriptions,
+        dietary preferences, allergies) or calculated from data you entered (pregnancy
+        week derived from your due date, nutrient gaps derived from your meal logs).
+        No data is collected passively or without your action.
       </p>
+
+      <h3>How data is used</h3>
       <p>
+        Data is sent to the AI service solely to generate the specific response you
+        requested (e.g., a nutrition analysis of your meal, or meal suggestions based
+        on your nutrient gaps). We do not use this data to build personal profiles,
+        train AI models, or associate AI results with your identity.
+      </p>
+
+      <h3>Third-party AI service</h3>
+      <p>
+        AI processing is performed by <strong>Google Gemini</strong>, accessed through
+        our secure backend server. Your data is sent to Google's servers for processing
+        and is subject to
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.
         We do not store your AI inputs or outputs on our servers beyond the time needed
         to deliver the response.
+      </p>
+
+      <h3>What is NOT sent to AI</h3>
+      <p>
+        The following data is stored only on your device and is never sent to our
+        servers or any third-party AI service: your due date, height, weight, name,
+        email, or any personal identifiers.
       </p>
     </section>
 
@@ -217,33 +246,66 @@
         NutriNest helps expecting mothers track daily nutrition during pregnancy.
       </p>
 
-      <p><strong>Data stored on your device:</strong></p>
+      <h4>Data collected and stored on your device only</h4>
+      <p>The following data is entered by you and stored locally on your device using Apple's on-device frameworks. It is <strong>never</strong> sent to our servers or any third party:</p>
       <ul>
-        <li>Pregnancy-related information you enter during onboarding (due date, height, weight, dietary preferences, allergies)</li>
+        <li>Due date, height, and weight</li>
         <li>Meal logs and nutrition analysis results</li>
         <li>Custom nutrient goals and daily scores</li>
       </ul>
 
+      <h4>Data shared with our server and Google Gemini AI</h4>
+      <p>When you use AI-powered features, the following data is sent to our secure backend server, which forwards it to Google Gemini for processing:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>How collected</th>
+            <th>When sent</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Meal descriptions</td>
+            <td>You type them when logging a meal</td>
+            <td>Each time you log a meal</td>
+            <td>AI analyzes the meal's nutritional content</td>
+          </tr>
+          <tr>
+            <td>Pregnancy week</td>
+            <td>Calculated from the due date you entered</td>
+            <td>Each time you log a meal</td>
+            <td>AI tailors nutrient estimates to your stage of pregnancy</td>
+          </tr>
+          <tr>
+            <td>Dietary preferences &amp; allergies</td>
+            <td>You select them during onboarding or in settings</td>
+            <td>Each time you log a meal</td>
+            <td>AI considers your dietary needs in its analysis</td>
+          </tr>
+          <tr>
+            <td>Nutrient gaps</td>
+            <td>Calculated from your daily meal logs</td>
+            <td>When you request meal suggestions</td>
+            <td>AI suggests meals to fill your specific nutrient gaps</td>
+          </tr>
+        </tbody>
+      </table>
+
       <p>
-        This data never leaves your device except in the following cases:
+        All AI processing is performed by <strong>Google Gemini</strong> via our secure backend.
+        See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> for how they handle data.
+        We do not store your meal descriptions, AI inputs, or AI outputs on our servers.
       </p>
+
+      <h4>Other server-side data</h4>
       <ul>
-        <li>When you log a meal, the meal description text is sent to our secure backend, which forwards it to Google Gemini for nutrition analysis. The analysis result is returned to your device and stored locally.</li>
-        <li>When you request meal suggestions, your current nutrient gaps and dietary preferences are sent to our secure backend for AI-powered recommendations.</li>
+        <li><strong>Trial status:</strong> NutriNest offers a 24-hour free trial. Trial status is tracked server-side using your anonymous session identifier to prevent abuse. No personal information is associated with this record.</li>
+        <li><strong>Usage limits:</strong> Anonymous daily API usage counts are stored server-side to enforce fair use limits. These reset daily and are keyed by anonymous session identifier.</li>
+        <li><strong>Subscription status:</strong> Managed by RevenueCat using an anonymous app-generated identifier. No personal or payment information is stored on our servers.</li>
       </ul>
-
-      <p>
-        Your pregnancy week and dietary preferences are sent to our secure backend
-        when analyzing meals or generating suggestions, as this information is necessary
-        for accurate nutrition recommendations. Your due date, height, and weight are
-        never sent to our servers or any third party.
-      </p>
-
-      <p>
-        NutriNest offers a 24-hour free trial. Trial status is tracked server-side
-        using your anonymous session identifier to prevent abuse. No personal
-        information is associated with this record.
-      </p>
     </section>
 
     <footer>
