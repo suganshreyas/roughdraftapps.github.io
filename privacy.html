@@ -304,17 +304,12 @@
 
 <h3>Tero - Rock Identifier</h3>
 
-<h4>Device-Only Data</h4>
+<h4>AI Processing</h4>
 <p>
-  Photos you take or select are processed on-device using Apple's Core ML framework for free scans.
-  Your rock collection, scan history, and app preferences are stored locally via SwiftData and are never uploaded to any server.
-  All on-device data is deleted when you uninstall the app.
+  Every scan sends your rock photo to Google Gemini AI via our secure backend server for identification.
+  Free users get 3 scans per day; Pro subscribers get unlimited scans. All scans require an internet connection.
 </p>
-
-<h4>AI Processing (Pro Scans)</h4>
-<p>
-  When you use Pro Analysis, the following data is sent to Google Gemini AI via our secure backend server for identification:
-</p>
+<p>The following data is sent when you scan:</p>
 <ul>
   <li>Your rock photo (resized, not full resolution)</li>
   <li>Optional context you provide: where you found it and surface conditions</li>
@@ -328,22 +323,29 @@
 <h4>Data We Never Send to AI</h4>
 <ul>
   <li>Your name, email, or Apple ID</li>
-  <li>Your precise GPS coordinates</li>
+  <li>Your GPS coordinates or location</li>
   <li>Your device information or IP address</li>
   <li>Any other photos on your device</li>
   <li>Your collection or scan history</li>
 </ul>
 
-<h4>Free Scans (On-Device AI)</h4>
+<h4>Device-Only Data</h4>
 <p>
-  Free scans use an on-device Core ML model that runs entirely on your phone.
-  No photos or data leave your device during free scans. No internet connection is required.
+  Your rock collection, scan history, and app preferences are stored locally on your device via SwiftData.
+  This data is never uploaded to any server and is deleted when you uninstall the app.
+</p>
+
+<h4>Geology Explorer</h4>
+<p>
+  The Explore tab shows geological data from <a href="https://macrostrat.org" target="_blank" rel="noopener">Macrostrat.org</a> (CC-BY 4.0).
+  When you tap or search a location on the map, that coordinate is sent to our server to fetch geological data.
+  Your device's GPS location is never accessed or sent.
 </p>
 
 <h4>Server-Side Data</h4>
 <ul>
   <li><strong>Authentication:</strong> Firebase Anonymous Authentication creates a random device-level identifier &mdash; no personal credentials required.</li>
-  <li><strong>Pro Trial:</strong> Trial scan usage (count only) is tracked server-side using your anonymous identifier to prevent abuse.</li>
+  <li><strong>Daily scan tracking:</strong> Your daily scan count is tracked server-side using your anonymous identifier to enforce the free tier limit. No personal data is attached.</li>
   <li><strong>Subscriptions:</strong> Managed by RevenueCat via the App Store. We do not receive or store payment card details, billing information, or Apple ID credentials.</li>
   <li><strong>Feedback:</strong> If you submit feedback through the app, your message is stored with your anonymous user ID. No personal information is attached.</li>
   <li><strong>Analytics:</strong> Firebase Analytics and Crashlytics collect anonymous usage metrics (device type, OS version, feature usage) to improve the app.</li>
@@ -352,12 +354,11 @@
 <h4>Subscription Information</h4>
 <ul>
   <li><strong>Tero Pro Weekly:</strong> $2.99 per week, auto-renews unless cancelled at least 24 hours before the end of the current billing period.</li>
-  <li><strong>Tero Pro Annual:</strong> $29.99 per year</li>
+  <li><strong>Tero Pro Annual:</strong> $29.99 per year, auto-renews unless cancelled at least 24 hours before the end of the current billing period.</li>
   <li>Payment is charged to your Apple ID at confirmation of purchase.</li>
   <li>Manage or cancel subscriptions in <strong>Settings &rarr; Apple ID &rarr; Subscriptions</strong>.</li>
   <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use (Apple Standard EULA)</a></li>
 </ul>
-
     </section>
 
     <footer>
