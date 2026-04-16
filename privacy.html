@@ -297,68 +297,69 @@
   the NutriNest and ScanRx sections.
 -->
 
-<!--
-  Tero - App-Specific Privacy Section
-  Replace the RockIdentifier block in roughdraftapps.com/privacy.html
--->
+<!-- Tero - Rock Identifier Privacy Section -->
+<!-- Replace the existing "Tero - Rock Identifier" section with this -->
 
 <h3>Tero - Rock Identifier</h3>
 
-<h4>AI Processing</h4>
-<p>
-  Every scan sends your rock photo to Google Gemini AI via our secure backend server for identification.
-  Free users get 3 scans per day; Pro subscribers get unlimited scans. All scans require an internet connection.
-</p>
-<p>The following data is sent when you scan:</p>
+<h4>How Identification Works</h4>
+<p>Tero offers two identification modes:</p>
 <ul>
-  <li>Your rock photo (resized, not full resolution)</li>
-  <li>Optional context you provide: where you found it and surface conditions</li>
+    <li><strong>Free (On-Device AI):</strong> Your rock photo is analyzed entirely on your device using a built-in machine learning model. No data leaves your phone. No internet required. Unlimited scans.</li>
+    <li><strong>Pro (Enhanced AI):</strong> Your rock photo is sent to Google Gemini AI via our secure backend server for deeper analysis with reasoning, verification tips, and collector information. Requires an internet connection and a Pro subscription.</li>
 </ul>
-<p>
-  This data is used solely to generate your identification result and is not retained after processing.
-  Google's data usage policies apply to AI processing &mdash; see
-  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
-</p>
+
+<h4>Data Sent During Pro Scans</h4>
+<p>When you use a Pro scan, the following data is sent to our server and then to Google Gemini:</p>
+<ul>
+    <li>Your rock photo (resized, not full resolution)</li>
+    <li>Optional context you provide: where you found it (city/region) and surface conditions</li>
+</ul>
+<p>This data is used solely to generate your identification result and is not retained after processing. Google's data usage policies apply to AI processing — see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+<p>You can review and revoke your Gemini AI consent at any time in the app under <strong>Settings → AI & Privacy</strong>.</p>
 
 <h4>Data We Never Send to AI</h4>
 <ul>
-  <li>Your name, email, or Apple ID</li>
-  <li>Your GPS coordinates or location</li>
-  <li>Your device information or IP address</li>
-  <li>Any other photos on your device</li>
-  <li>Your collection or scan history</li>
+    <li>Your name, email, or Apple ID</li>
+    <li>Your GPS coordinates or precise location</li>
+    <li>Your device information or IP address</li>
+    <li>Any other photos on your device</li>
+    <li>Your collection or scan history</li>
 </ul>
 
 <h4>Device-Only Data</h4>
-<p>
-  Your rock collection, scan history, and app preferences are stored locally on your device via SwiftData.
-  This data is never uploaded to any server and is deleted when you uninstall the app.
-</p>
+<p>Your rock collection, scan history, and app preferences are stored locally on your device via SwiftData. This data is never uploaded to any server and is deleted when you uninstall the app.</p>
+
+<h4>Community Discoveries</h4>
+<p>When you share a rock discovery to the community feed, the following data is uploaded to our servers:</p>
+<ul>
+    <li>Your rock photo (stored in Google Cloud Storage)</li>
+    <li>Rock identification result (name, confidence, assessment)</li>
+    <li>Approximate location (rounded to ~1km precision, never your exact GPS coordinates)</li>
+    <li>City name (if provided)</li>
+</ul>
+<p>Community discoveries are visible to all users on the map and in the discoveries feed. You can report inappropriate content or block users whose discoveries you don't want to see. Reports are reviewed by our team.</p>
 
 <h4>Geology Explorer</h4>
-<p>
-  The Explore tab shows geological data from <a href="https://macrostrat.org" target="_blank" rel="noopener">Macrostrat.org</a> (CC-BY 4.0).
-  When you tap or search a location on the map, that coordinate is sent to our server to fetch geological data.
-  Your device's GPS location is never accessed or sent.
-</p>
+<p>The map shows geological data from <a href="https://macrostrat.org">Macrostrat.org</a> (CC-BY 4.0). When you tap or search a location on the map, that coordinate is sent to our server to fetch geological data. Your device's GPS location is never accessed or sent — the app uses city selection, not GPS.</p>
 
 <h4>Server-Side Data</h4>
 <ul>
-  <li><strong>Authentication:</strong> Firebase Anonymous Authentication creates a random device-level identifier &mdash; no personal credentials required.</li>
-  <li><strong>Daily scan tracking:</strong> Your daily scan count is tracked server-side using your anonymous identifier to enforce the free tier limit. No personal data is attached.</li>
-  <li><strong>Subscriptions:</strong> Managed by RevenueCat via the App Store. We do not receive or store payment card details, billing information, or Apple ID credentials.</li>
-  <li><strong>Feedback:</strong> If you submit feedback through the app, your message is stored with your anonymous user ID. No personal information is attached.</li>
-  <li><strong>Analytics:</strong> Firebase Analytics and Crashlytics collect anonymous usage metrics (device type, OS version, feature usage) to improve the app.</li>
+    <li><strong>Authentication:</strong> Firebase Anonymous Authentication creates a random device-level identifier — no personal credentials required.</li>
+    <li><strong>Subscriptions:</strong> Managed by RevenueCat via the App Store. We do not receive or store payment card details, billing information, or Apple ID credentials.</li>
+    <li><strong>Feedback & Reports:</strong> If you submit feedback or report a discovery, your message is stored with your anonymous user ID. No personal information is attached.</li>
+    <li><strong>Analytics:</strong> Firebase Analytics and Crashlytics collect anonymous usage metrics (device type, OS version, feature usage) to improve the app. No personally identifiable information is collected.</li>
 </ul>
 
 <h4>Subscription Information</h4>
 <ul>
-  <li><strong>Tero Pro Weekly:</strong> $2.99 per week, auto-renews unless cancelled at least 24 hours before the end of the current billing period.</li>
-  <li><strong>Tero Pro Annual:</strong> $29.99 per year, auto-renews unless cancelled at least 24 hours before the end of the current billing period.</li>
-  <li>Payment is charged to your Apple ID at confirmation of purchase.</li>
-  <li>Manage or cancel subscriptions in <strong>Settings &rarr; Apple ID &rarr; Subscriptions</strong>.</li>
-  <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use (Apple Standard EULA)</a></li>
+    <li><strong>Tero Pro Weekly:</strong> $3.99 per week, auto-renews unless cancelled at least 24 hours before the end of the current billing period.</li>
+    <li><strong>Tero Pro Annual:</strong> $34.99 per year, auto-renews unless cancelled at least 24 hours before the end of the current billing period.</li>
+    <li>Payment is charged to your Apple ID at confirmation of purchase.</li>
+    <li>Manage or cancel subscriptions in <strong>Settings → Apple ID → Subscriptions</strong>.</li>
+    <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (Apple Standard EULA)</a></li>
 </ul>
+
     </section>
 
     <footer>
