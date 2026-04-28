@@ -359,6 +359,61 @@
     <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (Apple Standard EULA)</a></li>
 </ul>
 
+      <h3>BioSnap - Heal Your Neighbourhood</h3>
+
+<p>BioSnap is a plant identification game that turns scanning real plants into greening a map of your city. All plant identification happens on your device.</p>
+
+<h4>How Identification Works</h4>
+<p>BioSnap uses a Core ML model bundled with the app to identify plants <strong>entirely on your device</strong>. When you scan a plant:</p>
+<ul>
+    <li>The photo is processed on-device by Apple's Core ML framework</li>
+    <li>The result (species name, confidence) is computed locally and never leaves your phone</li>
+    <li>No internet connection is required for identification</li>
+    <li>No image is sent to any server, AI service, or third party</li>
+</ul>
+
+<h4>Device-Only Data</h4>
+<p>The following data is stored locally on your device using Apple's SwiftData and UserDefaults frameworks. It is <strong>never</strong> sent to our servers or any third party:</p>
+<ul>
+    <li>Your discovered species and collection progress</li>
+    <li>Tile healing progress for your city</li>
+    <li>Heart balance and economy state</li>
+    <li>Onboarding and tutorial state</li>
+    <li>App preferences and city selection</li>
+</ul>
+<p>This data is deleted when you uninstall the app.</p>
+
+<h4>Location Data</h4>
+<p>BioSnap uses your device's location (when-in-use only) to:</p>
+<ul>
+    <li>Show plant species commonly found near you on the map</li>
+    <li>Tag scans with an approximate location so you can revisit your discoveries</li>
+    <li>Verify scans are made in the real world (anti-cheat)</li>
+</ul>
+<p>Your precise GPS coordinates are stored only on your device and used only by the app. Approximate location (city, country) is included in anonymous analytics events to help us understand which regions our users come from. Your exact GPS coordinates are <strong>never</strong> sent off-device.</p>
+
+<h4>What We Never Send</h4>
+<ul>
+    <li>Your name, email, or Apple ID</li>
+    <li>Your exact GPS coordinates</li>
+    <li>Photos you take in the app (camera capture is processed entirely on-device, then discarded)</li>
+    <li>Photos from your photo library — BioSnap can only scan via the camera</li>
+    <li>Any contents of your collection or scan history</li>
+</ul>
+
+<h4>Server-Side Data</h4>
+<ul>
+    <li><strong>Authentication:</strong> Firebase Anonymous Authentication creates a random device-level identifier so we can attribute analytics events to your install. No personal credentials, email, or sign-in is required. Reinstalling the app generates a new identifier.</li>
+    <li><strong>Analytics:</strong> Firebase Analytics and a per-user Firestore event log collect anonymous usage metrics — onboarding progression, scan counts, heal progress, session duration, app version, device model, OS version, and your selected city. No personally identifiable information is collected. This data helps us understand how the app is used and improve it. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</li>
+    <li><strong>Crash diagnostics:</strong> Firebase Crashlytics collects crash reports and performance data when the app crashes. Reports include device model, OS version, and stack traces. No personally identifiable information is included.</li>
+</ul>
+
+<h4>Subscription Information</h4>
+<p>BioSnap is free to use. There are no subscriptions, in-app purchases, or paid tiers at this time. If we add paid features in a future version, this policy will be updated and the new section will describe them clearly before the change takes effect.</p>
+
+<h4>Tracking</h4>
+<p>BioSnap does <strong>not</strong> track you across other apps or websites. We do not use the App Tracking Transparency framework because we do not link any data to third-party tracking. The anonymous Firebase identifier is used only within BioSnap.</p>
+
     </section>
 
     <footer>
