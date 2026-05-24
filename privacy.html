@@ -242,29 +242,76 @@
         Rough Draft Oy apps.
       </p>
 
-      <h3>NutriNest - Pregnancy Nutrition Tracker</h3>
-      <p>
-        NutriNest helps expecting mothers track daily nutrition during pregnancy.
-      </p>
+<!--
+  NutriNest - App-Specific Privacy Section
 
-      <h4>Data stored on your device only</h4>
-      <p>The following data is stored locally on your device and is <strong>never</strong> sent to our servers or any third party:</p>
-      <ul>
-        <li>Due date, height, and weight</li>
-        <li>Meal logs and nutrition analysis results</li>
-        <li>Custom nutrient goals and daily scores</li>
-      </ul>
+  Last updated for v1.2 — May 2026.
+-->
 
-      <h4>Data shared with AI</h4>
-      <p>When you use AI-powered features, data such as meal descriptions, pregnancy week, dietary preferences, and nutrient gaps is sent to our secure backend server for processing by <strong>Google Gemini</strong>. This data is used solely to generate the response you requested. We do not store AI inputs or outputs on our servers. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
+<h3>NutriNest - Your Pregnancy Companion</h3>
+<p>
+  NutriNest is a private pregnancy companion. It tracks your week-by-week
+  pregnancy, lets you journal, count baby kicks, time contractions, plan
+  your hospital bag, log weight, manage appointments, ask questions to an
+  AI assistant, and discover pregnancy-friendly recipes.
+</p>
 
-      <h4>Other server-side data</h4>
-      <ul>
-        <li><strong>Trial tracking:</strong> NutriNest offers a free trial. Trial eligibility is tracked server-side using an anonymous identifier. No personal information is collected or stored.</li>
-        <li><strong>Usage limits:</strong> Anonymous daily API usage counts are stored server-side to enforce fair use limits.</li>
-        <li><strong>Subscription status:</strong> Managed by RevenueCat. See <a href="https://www.revenuecat.com/privacy">RevenueCat's Privacy Policy</a>.</li>
-      </ul>
+<h4>Data stored on your device only</h4>
+<p>The following data is stored locally using Apple's on-device SwiftData framework and is <strong>never</strong> sent to our servers or shared with any third party:</p>
+<ul>
+  <li>Your name and due date</li>
+  <li>Dietary preference and allergies (used to personalize AI responses; see below)</li>
+  <li>Whether you're carrying more than one baby</li>
+  <li>Journal entries and notes</li>
+  <li>Weight log entries</li>
+  <li>Contraction timer history</li>
+  <li>Baby kick session history</li>
+  <li>Hospital bag checklist progress</li>
+  <li>Appointment list</li>
+  <li>Chat messages with the AI assistant (history is local to your device)</li>
+  <li>Saved recipes</li>
+</ul>
 
+<h4>Data shared with AI (Google Gemini)</h4>
+<p>When you use the in-app AI features (chat or recipe generation), you can choose whether to opt in. If you opt in, the following data is sent to our secure backend, which forwards it to <strong>Google Gemini</strong> for processing:</p>
+<ul>
+  <li>Your pregnancy week and trimester</li>
+  <li>Your dietary preference (plant-based, mixed, or animal-based)</li>
+  <li>Your allergies and any other restrictions you entered</li>
+  <li>Whether you're carrying more than one baby</li>
+  <li>The chat message or ingredient list you type</li>
+</ul>
+<p>We do <strong>not</strong> send: your name, your journal entries, weight log, kick or contraction history, appointment details, hospital bag list, or any other personal information you entered into the app. We do not store AI inputs or outputs on our servers. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> for how Google handles data sent to the Gemini API.</p>
+
+<h4>Server-side data</h4>
+<ul>
+  <li><strong>Usage limits:</strong> An anonymous Firebase identifier is used to count your daily AI requests, so we can enforce fair-use limits and the free tier. No personal information is stored alongside the counter.</li>
+  <li><strong>Feedback:</strong> If you submit feedback through the in-app form, the subject and message you enter are stored on our server to help us improve the app. They are linked only to your anonymous Firebase identifier, never to your name or any other personal information.</li>
+  <li><strong>Subscription status:</strong> Managed by RevenueCat. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</li>
+</ul>
+
+<h4>Analytics and crash reporting</h4>
+<p>We use Firebase to collect anonymous app-quality data, all linked only to an anonymous on-device identifier (never to your name or any personal data you entered):</p>
+<ul>
+  <li><strong>Firebase Analytics</strong> — which screens and features are used (for example, how many users open the Tools tab or use the kick counter). Event names and parameters carry no personal content (no journal text, no chat messages, no recipe names).</li>
+  <li><strong>Firebase Crashlytics</strong> — crash reports and stack traces when the app encounters an error.</li>
+  <li><strong>Firebase Performance Monitoring</strong> — app launch time and network latency, used to keep the app fast.</li>
+</ul>
+<p>See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security in Firebase</a> for how Firebase handles this data.</p>
+
+<h4>What we don't do</h4>
+<ul>
+  <li>We do not track you across other apps or websites. NutriNest sets <code>NSPrivacyTracking = false</code> in its Privacy Manifest.</li>
+  <li>We do not sell or rent your data to anyone, ever.</li>
+  <li>We do not show ads in the app.</li>
+  <li>We do not require an account, an email, or a password. NutriNest uses Apple's Anonymous Firebase Auth — a per-install identifier stored in your iOS keychain. There is no profile to log into.</li>
+</ul>
+
+<h4>Deleting your data</h4>
+<p>Deleting the NutriNest app from your device removes all on-device data immediately. Server-side records (anonymous usage counters, any feedback you submitted, and your subscription record from RevenueCat) are tied only to the anonymous Firebase identifier created on your device. If you'd like us to delete those records as well, email <a href="mailto:sugan.shreyas@gmail.com">sugan.shreyas@gmail.com</a> with the request and we'll remove them.</p>
+
+
+      
       <h3>ScanRx - Pill Counter</h3>
 
       <p>ScanRx helps pharmacists and healthcare professionals count pills using on-device AI.</p>
