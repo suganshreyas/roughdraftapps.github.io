@@ -460,6 +460,45 @@
 <h4>Tracking</h4>
 <p>BioSnap does <strong>not</strong> track you across other apps or websites. We do not use the App Tracking Transparency framework because we do not link any data to third-party tracking. The anonymous Firebase identifier is used only within BioSnap.</p>
 
+      <!--
+  TipTracker - App-Specific Privacy Section
+
+  Source of truth for the TipTracker block in roughdraftapps.com/privacy.html.
+  Paste this inside the "App-Specific Information" <section>, alongside the
+  NutriNest / ScanRx / Tero / BioSnap blocks. Edit this file, then copy to the
+  live page — never the reverse.
+
+  Mirrors PrivacyInfo.xcprivacy: DeviceID + ProductInteraction + PerformanceData
+  (Analytics), UserDefaults (CA92.1), NSPrivacyTracking = false.
+
+  Last updated: May 2026.
+-->
+
+<h3>TipTracker - Tip &amp; Income Tracker</h3>
+
+<p>TipTracker helps service workers log their shifts, tips, and hourly earnings, and see insights into their income over time. Your earnings data stays on your device.</p>
+
+<h4>Data stored on your device only</h4>
+<p>The following data is stored locally using Apple's on-device SwiftData framework and is <strong>never</strong> sent to our servers or shared with any third party:</p>
+<ul>
+    <li><strong>Shift &amp; earnings data</strong> - tip amounts, hourly wages, hours worked, sales, cash totals, cover counts, and any notes you add to a shift</li>
+    <li><strong>Workplaces</strong> - the jobs or workplaces you set up to organize your shifts</li>
+</ul>
+<p>Your actual earnings figures never leave your device. This data is deleted when you uninstall the app.</p>
+
+<h4>Server-side data</h4>
+<ul>
+    <li><strong>Authentication:</strong> TipTracker uses Firebase Anonymous Authentication to create a random device-level identifier. No account, email, password, or personal information is required. Reinstalling the app generates a new identifier.</li>
+    <li><strong>Analytics:</strong> Firebase Analytics and a per-user Firestore event log collect anonymous usage metrics — app opens, onboarding progression, when a shift is saved, paywall views, and subscription events — along with aggregate session and performance metrics. When a shift is saved, only whether it included tips, hours, or a wage is recorded (as true/false flags); <strong>your tip, wage, and hour amounts are never sent</strong>. No personally identifiable information is collected. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</li>
+    <li><strong>Subscription status:</strong> Managed by RevenueCat via the App Store. We do not receive or store payment card details, billing information, or Apple ID credentials. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</li>
+</ul>
+
+<h4>Tracking</h4>
+<p>TipTracker does <strong>not</strong> track you across other apps or websites, and sets <code>NSPrivacyTracking = false</code> in its Privacy Manifest. We do not use the App Tracking Transparency framework. We do not collect your name, email, contacts, or location. The anonymous Firebase identifier is used only within TipTracker.</p>
+
+<h4>Deleting your data</h4>
+<p>Deleting the TipTracker app from your device removes all on-device data immediately. Server-side records (anonymous analytics events and your subscription record from RevenueCat) are tied only to the anonymous Firebase identifier created on your device. If you'd like us to delete those records as well, email <a href="mailto:sugan.shreyas@gmail.com">sugan.shreyas@gmail.com</a> with the request and we'll remove them.</p>
+
     </section>
 
     <footer>
