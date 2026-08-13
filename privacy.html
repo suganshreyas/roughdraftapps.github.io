@@ -189,6 +189,7 @@
         <li>Google Firebase (analytics, crash reporting, and anonymous authentication)</li>
         <li>Google Gemini (AI-powered features, accessed via our secure backend)</li>
         <li>RevenueCat (subscription management)</li>
+        <li>Amplitude (anonymous usage analytics, used by some apps)</li>
         <li>Apple App Store services</li>
       </ul>
       <p>
@@ -310,7 +311,7 @@
 
 <h4>Deleting your data</h4>
 <p>Deleting the NutriNest app from your device removes all on-device data immediately. Server-side records (anonymous usage counters, any feedback you submitted, and your subscription record from RevenueCat) are tied only to the anonymous Firebase identifier created on your device. If you'd like us to delete those records as well, email <a href="mailto:info@roughdraftapps.com">info@roughdraftapps.com</a> with the request and we'll remove them.</p>
-      
+
       <h3>ScanRx - Pill Counter</h3>
 
       <p>ScanRx helps pharmacists and healthcare professionals count pills using on-device AI.</p>
@@ -498,6 +499,48 @@
 
 <h4>Deleting your data</h4>
 <p>Deleting the TipTracker app from your device removes all on-device data immediately. Server-side records (anonymous analytics events and your subscription record from RevenueCat) are tied only to the anonymous Firebase identifier created on your device. If you'd like us to delete those records as well, email <a href="mailto:info@roughdraftapps.com">info@roughdraftapps.com</a> with the request and we'll remove them.</p>
+
+<!--
+  Little Scenes - App-Specific Privacy Section
+  Last updated for v1.0 — August 2026.
+-->
+
+<h3>Little Scenes - Speak Spanish in Real Scenes</h3>
+<p>
+  Little Scenes teaches you to speak Spanish by playing short, real-life video
+  scenes and speaking your replies out loud. It is a voice-based app.
+</p>
+
+<h4>Speech and microphone</h4>
+<p>Little Scenes uses your microphone and Apple's Speech Recognition to understand the Spanish you speak. This recognition runs <strong>on your device</strong> using Apple's on-device speech recognition. Your voice is <strong>never</strong> sent to our servers, is not shared with any third party, and is not recorded or stored by us.</p>
+
+<h4>Data stored on your device only</h4>
+<p>The following is stored locally on your device using Apple's on-device frameworks and is <strong>never</strong> sent to our servers or shared with any third party:</p>
+<ul>
+  <li>Your onboarding and progress state (which scenes you have started, completed, and mastered)</li>
+  <li>An anonymous, randomly generated identifier used for analytics (see below)</li>
+</ul>
+
+<h4>Analytics</h4>
+<p>To understand how the app is used and to improve it, we collect anonymous usage events using <strong>Amplitude</strong>, linked only to a random identifier generated on your device (never to your name or any personal data):</p>
+<ul>
+  <li>Anonymous product-usage events, for example which scenes are started and completed. Event names and parameters carry no personal content.</li>
+</ul>
+<p>See <a href="https://amplitude.com/privacy" target="_blank" rel="noopener">Amplitude's Privacy Policy</a> for how Amplitude handles this data.</p>
+
+<h4>Feedback</h4>
+<p>If you submit feedback through the in-app form, the feedback you type is saved to a private spreadsheet we manage (hosted by Google) to help us improve the app. Providing your email is <strong>optional</strong>; if you choose to include it, we use it only to reply to you or to let you know when new scenes are available. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> for how Google handles this data.</p>
+
+<h4>What we don't do</h4>
+<ul>
+  <li>We do not track you across other apps or websites. Little Scenes sets <code>NSPrivacyTracking = false</code> in its Privacy Manifest and uses no advertising identifier (IDFA).</li>
+  <li>We do not sell or rent your data to anyone, ever.</li>
+  <li>We do not show ads in the app.</li>
+  <li>We do not require an account, an email, or a password.</li>
+</ul>
+
+<h4>Deleting your data</h4>
+<p>Deleting the Little Scenes app from your device removes all on-device data immediately. If you submitted feedback (and optionally your email), or you would like us to delete the anonymous analytics associated with your device, email <a href="mailto:info@roughdraftapps.com">info@roughdraftapps.com</a> and we'll remove it.</p>
 
     </section>
 
