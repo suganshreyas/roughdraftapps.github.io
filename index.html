@@ -5,6 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rough Draft Oy</title>
   <link rel="stylesheet" href="/styles.css" />
+  <style>
+    /* Homepage app cards (icons + App Store links). Scoped additions that build
+       on the existing .app-card / .app-grid in styles.css. */
+    a.app-card {
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    a.app-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+    .app-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .app-row {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      flex-shrink: 0;
+      object-fit: cover;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+    }
+    .app-icon-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      background: #eceae4;
+    }
+    .app-row h3 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+    .app-cat {
+      margin: 0.15rem 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    .app-card > p {
+      margin: 0.6rem 0 1rem;
+      flex-grow: 1;
+      font-size: 0.95rem;
+    }
+    .app-store-link {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    a.app-card:hover .app-store-link {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .badge {
+      display: inline-block;
+      background: #eceae4;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+    }
+    .apps-all {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -29,38 +104,101 @@
 
     <section>
       <p>
-        Keep it small. Keep it simple. Keep it moving. These are the core values. 
+        Keep it small. Keep it simple. Keep it moving. These are the core values.
       </p>
     </section>
-<section class="apps">
-  <h2>Apps</h2>
 
-  <div class="app-grid">
-    <div class="app-card">
-      <h3>Pregnancy App</h3>
-      <p>
-        A simple tool to help pregnant women understand daily nutrition
-        and eat with more confidence.
+    <section class="apps">
+      <h2>Apps</h2>
+
+      <div class="app-grid">
+
+        <a class="app-card" href="https://apps.apple.com/us/app/contraction-timer-nutrinest/id6757366472" target="_blank" rel="noopener">
+          <div class="app-row">
+            <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7e/29/6a/7e296a44-ab0e-906e-c4b2-47474bbdeb2d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NutriNest app icon" width="60" height="60" loading="lazy" />
+            <div>
+              <h3>NutriNest</h3>
+              <p class="app-cat">Health &amp; Pregnancy</p>
+            </div>
+          </div>
+          <p>A calm pregnancy companion: track your week, time contractions, count kicks, and get answers in the moments between doctor visits.</p>
+          <span class="app-store-link">View on the App Store &rarr;</span>
+        </a>
+
+        <a class="app-card" href="https://apps.apple.com/us/app/mineral-gem-rock-identifier/id6760971668" target="_blank" rel="noopener">
+          <div class="app-row">
+            <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1c/e6/02/1ce602c3-5491-db7f-75d4-909adbf593c1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Tero Rock Identifier app icon" width="60" height="60" loading="lazy" />
+            <div>
+              <h3>Tero &mdash; Rock Identifier</h3>
+              <p class="app-cat">Education</p>
+            </div>
+          </div>
+          <p>Identify rocks, minerals, and gems from a photo, and see what other collectors are discovering around the world.</p>
+          <span class="app-store-link">View on the App Store &rarr;</span>
+        </a>
+
+        <a class="app-card" href="https://apps.apple.com/us/app/plant-identifier-biosnap/id6764406318" target="_blank" rel="noopener">
+          <div class="app-row">
+            <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ea/4b/ad/ea4bad21-aa26-4bdd-ce83-3d379b5740dc/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="BioSnap app icon" width="60" height="60" loading="lazy" />
+            <div>
+              <h3>BioSnap</h3>
+              <p class="app-cat">Lifestyle</p>
+            </div>
+          </div>
+          <p>Point your camera at any plant to identify it on-device, and turn real-world scans into greening a map of your city.</p>
+          <span class="app-store-link">View on the App Store &rarr;</span>
+        </a>
+
+        <a class="app-card" href="https://apps.apple.com/us/app/pill-counter-ai-scanrx/id6759967866" target="_blank" rel="noopener">
+          <div class="app-row">
+            <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ae/54/6b/ae546b94-29e1-1a4c-03c8-775f02842eae/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="ScanRx Pill Counter app icon" width="60" height="60" loading="lazy" />
+            <div>
+              <h3>ScanRx &mdash; Pill Counter</h3>
+              <p class="app-cat">Utilities</p>
+            </div>
+          </div>
+          <p>Count pills instantly from a photo using on-device AI. Built for pharmacists and healthcare professionals.</p>
+          <span class="app-store-link">View on the App Store &rarr;</span>
+        </a>
+
+        <a class="app-card" href="https://apps.apple.com/us/app/server-tip-tracker-income-log/id6773467042" target="_blank" rel="noopener">
+          <div class="app-row">
+            <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2b/5c/0f/2b5c0f02-70d4-b2a2-20e1-05c8745cd7dc/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="TipTracker app icon" width="60" height="60" loading="lazy" />
+            <div>
+              <h3>TipTracker</h3>
+              <p class="app-cat">Finance</p>
+            </div>
+          </div>
+          <p>Log shifts, tips, and hourly earnings, and see exactly what you make over time. Built for service workers.</p>
+          <span class="app-store-link">View on the App Store &rarr;</span>
+        </a>
+
+        <div class="app-card">
+          <div class="app-row">
+            <div class="app-icon app-icon-placeholder">&#127909;</div>
+            <div>
+              <h3>Little Scenes</h3>
+              <p class="app-cat">Education</p>
+            </div>
+          </div>
+          <p>Learn Spanish by speaking your way through short, real-life video scenes.</p>
+          <span class="badge">Coming soon</span>
+        </div>
+
+      </div>
+
+      <p class="apps-all">
+        <a href="https://apps.apple.com/us/developer/suganshreyas-vasudevan/id1866400377" target="_blank" rel="noopener">See all apps on the App Store &rarr;</a>
       </p>
-      <p class="muted">Launching soon</p>
-    </div>
+    </section>
 
-    <div class="app-card">
-      <h3>More coming soon</h3>
+    <footer>
       <p>
-        New ideas, experiments, and interesting projects in progress.
+        &copy; 2026 Rough Draft Oy &mdash;
+        <a href="/privacy.html">Privacy</a> &mdash;
+        <a href="mailto:info@roughdraftapps.com">Contact</a>
       </p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>
-    © 2026 Rough Draft Oy —
-    <a href="/privacy.html">Privacy</a> —
-    <a href="mailto:info@roughdraftapps.com">Contact</a>
-  </p>
-</footer>
+    </footer>
   </main>
 </body>
 </html>
